@@ -21,10 +21,9 @@ body {
 
 .column {
   background: #ffffff;
-  width: 300px;
+  width: 360px;
   padding: 20px;
   box-sizing: border-box;
-  border: 1px solid #dcdcdc;
   display: flex;
   flex-direction: column;
   gap: 20px;
