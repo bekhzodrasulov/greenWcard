@@ -1,6 +1,3 @@
-// script.js
-
-// Плавный переход к якорю при нажатии на ссылки
 const links = document.querySelectorAll('a[href^="#"]');
 
 links.forEach((link) => {
@@ -13,5 +10,21 @@ links.forEach((link) => {
   });
 });
 
-// Можно добавить дополнительные интерактивные элементы, если нужно
-// Например: всплывающее окно, копирование ссылки и пр.
+const elements = document.querySelectorAll(".animate");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 150); // задержка между появлениями
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+  }
+);
+
+elements.forEach((el) => observer.observe(el));

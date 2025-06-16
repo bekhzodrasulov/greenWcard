@@ -15,82 +15,111 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // Блокировать правый клик
+      document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+      // Блокировать F12 и другие клавиши
+      document.addEventListener("keydown", function (e) {
+        if (
+          e.key === "F12" ||
+          (e.ctrlKey &&
+            e.shiftKey &&
+            (e.key === "I" || e.key === "J" || e.key === "C")) ||
+          (e.ctrlKey && e.key === "U") ||
+          (e.shiftKey && e.ctrlKey && e.key === "J")
+        ) {
+          e.preventDefault();
+        }
+      });
+    </script>
   </head>
   <body>
-    <main class="invitation">
-      <section class="column">
-        <div class="border-box">
-          <h2>WEDDING DAY</h2>
-          <p>ИГОРЬ И ОЛЬГА</p>
-          <h3>12 | 10 | 25</h3>
-        </div>
-      </section>
-      <section class="column green">
-        <div class="photo"><img src="couples.png" alt="Пара" /></div>
-        <div class="text-block">
-          <h4>ДОРОГИЕ ДРУЗЬЯ И РОДНЫЕ!</h4>
-          <p>
-            Мы так вас любим! Приглашаем стать свидетелями рождения нашей семьи.
-          </p>
-          <h3 class="wedding-date">12 | 10 | 25</h3>
-        </div>
-        <div class="program">
-          <h4>ПРОГРАММА</h4>
-          <p>
-            СБОР ГОСТЕЙ — 15:30<br />РЕГИСТРАЦИЯ — 16:00<br />БАНКЕТ — 18:00
-          </p>
-        </div>
-      </section>
-      <section class="column">
-        <div class="dress-code">
-          <h4>DRESS CODE</h4>
-          <p>
-            Будем благодарны, если поддержите нас пастельными или зелёными
-            оттенками в одежде.
-          </p>
-          <div class="palette">
-            <span class="color dark-green"></span>
-            <span class="color green"></span>
-            <span class="color olive"></span>
-            <span class="color beige"></span>
-            <span class="color white"></span>
+    <div class="wrapper">
+      <main class="invitation">
+        <section class="column">
+          <div class="border-box animate fade-up">
+            <h2>WEDDING DAY</h2>
+            <p>ИГОРЬ И ОЛЬГА</p>
+            <h3>12 | 10 | 25</h3>
           </div>
-        </div>
-        <div class="details">
-          <h4>ДЕТАЛИ</h4>
-          <p>
-            Просим не дарить цветы — мы не успеем насладиться их красотой.
-            Вместо них — небольшой знак внимания по вашему вкусу.
-          </p>
-        </div>
-      </section>
+        </section>
+        <section class="column green">
+          <div class="photo animate slide-left">
+            <img src="images/couples.png" alt="Пара" />
+          </div>
+          <div class="text-block animate fade-up">
+            <h4>ДОРОГИЕ ДРУЗЬЯ И РОДНЫЕ!</h4>
+            <p>
+              Мы так вас любим! Приглашаем стать свидетелями рождения нашей
+              семьи.
+            </p>
+            <h3 class="wedding-date">12 | 10 | 25</h3>
+          </div>
+          <div class="program animate fade-up">
+            <h4>ПРОГРАММА</h4>
+            <p>
+              СБОР ГОСТЕЙ — 15:30<br />РЕГИСТРАЦИЯ — 16:00<br />БАНКЕТ — 18:00
+            </p>
+          </div>
+        </section>
+        <section class="column">
+          <div class="dress-code animate fade-up">
+            <h4>DRESS CODE</h4>
+            <p>
+              Будем благодарны, если поддержите нас пастельными или зелёными
+              оттенками в одежде.
+            </p>
+            <div class="palette">
+              <span class="color dark-green"></span>
+              <span class="color green"></span>
+              <span class="color olive"></span>
+              <span class="color beige"></span>
+              <span class="color white"></span>
+            </div>
+          </div>
+          <div class="details animate fade-up">
+            <h4>ДЕТАЛИ</h4>
+            <p>
+              Просим не дарить цветы — мы не успеем насладиться их красотой.
+              Вместо них — небольшой знак внимания по вашему вкусу.
+            </p>
+          </div>
+        </section>
 
-      <section class="column green">
-        <div class="venue">
-          <img src="place.png" alt="Место" />
-          <h4>МЕСТО</h4>
-          <p>ЗАГОРОДНЫЙ КЛУБ «ARTLAND», г. Балашиха, 12 км от Москвы</p>
-          <a href="#">открыть карту</a>
-        </div>
-      </section>
+        <section class="column green">
+          <div class="venue animate fade-up">
+            <div class="photo animate slide-right">
+              <img src="images/place.png" alt="Место" />
+            </div>
+            <h4>МЕСТО</h4>
+            <p>ЗАГОРОДНЫЙ КЛУБ «ARTLAND», г. Балашиха, 12 км от Москвы</p>
+            <a href="#">открыть карту</a>
+          </div>
+        </section>
+        <section class="column">
+          <div class="chat animate fade-up">
+            <h4>ЧАТ ГОСТЕЙ</h4>
+            <p>Присоединяйтесь к телеграм-каналу<br />Делитесь фото и видео</p>
+            <a href="#">присоединиться</a>
+          </div>
+          <div class="contacts animate fade-up">
+            <h4>КОНТАКТЫ</h4>
+            <p>Организатор: Ангелина<br />Тел: 8-999-999-99-99</p>
+          </div>
+        </section>
 
-      <section class="column">
-        <div class="chat">
-          <h4>ЧАТ ГОСТЕЙ</h4>
-          <p>Присоединяйтесь к телеграм-каналу<br />Делитесь фото и видео</p>
-          <a href="#">присоединиться</a>
-        </div>
-        <div class="contacts">
-          <h4>КОНТАКТЫ</h4>
-          <p>Организатор: Ангелина<br />Тел: 8-999-999-99-99</p>
-        </div>
-        <div class="photo"><img src="couples_flower.png" alt="Пара 2" /></div>
-        <div class="closing">
-          <h4>ЖДЁМ ВАС!</h4>
-          <p>С любовью, Игорь и Ольга</p>
-        </div>
-      </section>
-    </main>
+        <section class="column green">
+          <div class="photo animate slide-left">
+            <img src="images/couples_flower.png" alt="Пара 2" />
+          </div>
+          <div class="closing animate fade-up">
+            <h4>ЖДЁМ ВАС!</h4>
+            <p>С любовью, Игорь и Ольга</p>
+          </div>
+        </section>
+      </main>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
