@@ -1,7 +1,7 @@
 /* style.css */
 body {
   margin: 0;
-  font-family: "Playfair Display", serif;
+  font-family: "Cormorant Infant", serif;
   background-color: #fefefc;
   color: #2c2c2c;
   display: flex;
@@ -37,14 +37,6 @@ body {
   border: 1px solid #51785d;
   padding: 20px;
   text-align: center;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-  font-weight: normal;
 }
 
 h1 {
@@ -121,4 +113,10 @@ a {
   width: 100px;
   height: 100px;
   margin-top: 10px;
+}
+
+.wadding-date {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  font-weight: 400;
 }
